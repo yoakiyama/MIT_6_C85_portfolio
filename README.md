@@ -1,1 +1,1 @@
-# MIT_6_C85_portfolio
+# MIT 6.C85 course portfolio
