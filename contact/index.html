@@ -13,14 +13,17 @@
         </ol>
     </nav>
     <title>Contact me</title>
+    <header>
+        Contact me
+    </header>
     <form action="mailto:yo_aki@mit.edu" method="POST" enctype="text/plain">
-        <label> Your email </label>
-            <input name="email" type="email" />
-        <label> Subject </label>
-            <input name="subject", type="text" />
-        <label> Body </label>
-            <textarea name="body"></textarea>
-        <button> Send email </button>
+        <label for="email">Your email</label>
+            <input id="email" name="email" type="email" />
+        <label for="subject">Subject</label>
+            <input id="subject" name="subject", type="text" />
+        <label for="body">Body</label>
+            <textarea id="subject" name="body" required></textarea>
+        <button type="submit">Send email</button>
     </form>
 </head>
 <body>
