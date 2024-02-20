@@ -68,8 +68,12 @@
 			Fenway, North End, and West End, which are all included in <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong>. 
 			We therefore just add those three neighborhoods to the table along with their respective zip codes.
 
-			Lastly, we concatenate this modified zip code file with the <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong> 
-			file so that for each entry in the table, we also have information regarding zip code. We use this combined dataset for all downstream analyses.
+			Lastly, we notice that <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong> contains a column called 
+			<strong><code>objectid</code></strong>. The values range from 1 to 24, but noticeably skip 2, 11, and 16. The metadata file does not 
+			contain additional infomation regarding <strong><code>objectid</code></strong>. After downloading the official census data from 
+			<a href="url">https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-block-groups</a>, we see that 
+			the missing entries correspond to Back Bay, Harbor Islands, and Mission Hill, respectively. Notably, 
+			Harbor Islands contains only zeros in the census data, likely because it is a National and State Park without residents. 
 
 		</section>
 
@@ -77,16 +81,32 @@
 			<h2>Discoveries & Insights</h2>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/field_distributions.jpeg" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This figure shows histograms to illustrate the distribution of every data field. While it may not be the cleanest plot in
+				a traditional sense, these histograms are helpful in understanding the different distributions across the fields, as well as
+				in identifying outliers or abnormalities in the data. For example, we notice that <strong><code>objectid</code></strong> takes values 
+				that range from 1 to 24, but noticeably skip three values. Upon closer examination of this column, we find that it is missing 
+				2, 11, and 16. The metadata file does not contain additional infomation regarding <strong><code>objectid</code></strong>.
+				After downloading the official census data from 
+				<a href="url">https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-block-groups</a>, we see that 
+				the missing entries correspond to Back Bay, Harbor Islands, and Mission Hill, respectively. Notably, 
+				Harbor Islands contains only zeros in the census data, likely because it is a National and State Park without residents. On the other hand,
+				Back Bay and Mission Hill are residential neighborhoods. 
+
+				We additionally notice several outliers across all of the fields, which we can examine more closely in subsequent visualizations. 
+				For instance, we see clear outliers in the population in juvenile correctional facilities (labeled as <code>juvenile</code>)
+				and the total population identifying as Black or African American (labeled as <code>black_all</code>). In both cases, these correspond 
+				to entries for Dorchester. In the next visualization, we can how juvenile detention and Black/African American populations have changed
+				over time.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="IMAGE_FILENAME" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				To my surprise, I every census-related . Unfortunately, this prevents us from conducting any temporal analyses using the dynamics
+				of population data in our analysis of corporate ownership and owner occupancy. 
 				</figcaption>
 			</figure>
 
