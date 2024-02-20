@@ -46,7 +46,31 @@
 						whether corporate ownership is somewhat uniform across companies, or if there are certain firms that are highly
 						active in the Boston market.</li>
 					</ul>
+				<li>Do </li>
 			</ol>
+		</section>
+
+		<section>
+			<h2>Data and preprocessing</h2>
+			For our exploratory analysis, we use the following data:
+			<ul>
+				<li><strong><code>Boston_Neighborhoods_Zipcodes.csv</code></strong></li>
+				<li><strong><code>Corp Ownership and Occupancy Over Time.csv</code></strong></li>
+				<li><strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong></li>
+			</ul>
+
+			Prior to creating any visualizations, we can check for compatibility of our three tables. We first notice that 
+			<strong><code>Corp Ownership and Occupancy Over Time.csv</code></strong> and <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong>
+			share the same data -- the only distinction is that <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong> contains
+			additional data from the Census. Therefore, we will just use <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong>.
+
+			We also notice that <strong><code>Boston_Neighborhoods_Zipcodes.csv</code></strong>, which maps zip codes to neighborhoods, is missing 
+			Fenway, North End, and West End, which are all included in <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong>. 
+			We therefore just add those three neighborhoods to the table along with their respective zip codes.
+
+			Lastly, we concatenate this modified zip code file with the <strong><code>Census + Corp Ownership and Occupancy Over Time.csv</code></strong> 
+			file so that for each entry in the table, we also have information regarding zip code. We use this combined dataset for all downstream analyses.
+
 		</section>
 
 		<section>
