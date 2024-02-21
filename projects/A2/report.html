@@ -117,26 +117,49 @@
 				<img src="images/corp_own_rate_time.png" alt="" />
 				<figcaption>
 				This figure shows us corporate ownership rates over time for every neighborhood. We see that the rate of corporate ownership 
-				generally monotonically increases between 2004 and 2024 across all neighborhoods. 
+				generally monotonically increases between 2004 and 2024 across all neighborhoods. Looking at the spread of ownership rates 
+				only in 2004 and in 2024, we notice that variance is substantially larger in 2024 -- standard devation of 0.03% and 0.08%, respectively.
+				This suggests that certain neighborhoods likely experienced larger increases in corporate ownership than others over the two decades. 
+				For example, South Boston Waterfront had a corporate ownership rate of 6% in 2004 and increased to 38% by 2024, whereas Hyde Park 
+				only increased from 2% to 12% in the same period of time. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="images/total_delta_corp_time.png" alt="" />
+				<img src="images/corp_own_start_end_rank_correlation.jpeg" alt="" />
 				<figcaption>
-				In this .
+				In this figure, we are primarily interested in whether neighborhoods that had relatively high 
+				corporate ownership rate in 2004 also show relatively high rates or changes in total corporate ownership rate by 2024. 
+				Since we are interested rank, we can treat corporate ownership rate as ordinal data in order to evaluate this question. Here, 				
+				we show a scatter plot of the rank of corporate ownership rates in 2004 on the x-axis 
+				and rank of corporate ownership rate in 2024 on the y-axis. We fit a linear regression to these data (dotted line), 
+				highlighting the 95% confidence interval of the mean in the shaded area. In both cases, every point corresponds to a single neighborhood. 
+				Lastly, we perform Spewarman's rank correlation in order to statistically evaluate relationships. 
+
+				The left-hand panel clarifies that the rank in corporate ownership rank is generally preserved between 2004 and 2024 (p-value = 1.2 * 10^). That is, 
+				neighborhoods with relatively high corporate ownership ranks in 2004 showed relatively high corporate ownership rates in 2024. Therefore, 
+				during those two decades, there was no drastic shift in the landscape of corporate ownership rates across neighborhoods. While this 
+				plot nicely 
+
+				The right-hand panel
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/delta_corp_own_start_end_rank_correlation.jpeg" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				In this scatter plot, the x-axis is the same as before, showing corporate ownership rank in 2004, and the y-axis shows the rank in 
+				total change in corporate ownership rate between 2004 and 2024. Similar to the previous figure, we fit a linear regression to these data, 
+				and calculate the Spearman's correlation between corporate ownership rate in 2004 and total change in rate between 2004 and 2024. We see
+				a weaker, but still significantly positive correlation in this case. The weaker correlation suggests that while the degree of corporate 
+				ownership rate in 2004 is somewhat indicative of relative change in rate during the two decades, there are indeed some neighborhoods that 
+				defy this trend. For instance, we see that . On the other hand, East Boston ranked among the lowest in corporate ownership rate in 2004, 
+				but experienced the second largest increase by 2024. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/total_delta_corp_time.pnh" alt="" />
 				<figcaption>
 				ENTER IMAGE CAPTION HERE.
 				</figcaption>
