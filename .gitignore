@@ -1,5 +1,4 @@
 data/
-*.twb
 *checkpoint.ipynb
 .DS_Store
 .~*
