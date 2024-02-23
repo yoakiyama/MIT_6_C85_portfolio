@@ -33,11 +33,15 @@
 							an already dire housing crisis across the country. Using our dataset, we will explore how corporate ownership rates in 
 							Boston have changed over time. Do we see an increase in corporate ownership? </li>
 					</ul>
-				<li>Have certain Boston neighborhoods experienced larger increases in coporate ownership than others?</li>
+				<li>Have certain Boston neighborhoods experienced larger increases in coporate ownership than others? Do neighborhoods that have 
+					the largest growth in corporate ownership rates cluster geographically?</li>
 					<ul> 
 						<li> To better understand the evolution of corporate ownership in Boston, it would also be interesting to analyze how 
-							these rates have changed in certain neighborhoods. There may be neighborhoods in Boston that have experienced 
-							much larger increases in purchases by companies over the years. This geographic information may inform us about the 
+							these rates have changed in certain neighborhoods. As the area around Downtown Boston continues to be an attractive 
+							location for companies and their employees, I wonder if these areas have seen larger growth in residential real-estate 
+							investments by corporations. Seeing so many new condos and apartment complexes being built around this area, I hypothesize 
+							that there has likely been an increase in corporate ownership of residential properties within the past several years, and 
+							perhaps moreso than areas further away from Downtown. This geographic information may inform us about the 
 							many variables that likely influence corporate ownership of residential properties.</li>
 					</ul>
 
@@ -93,6 +97,7 @@
 			<figure>
 				<img src="images/field_distributions.jpeg" alt="" />
 				<figcaption>
+				We start our data exploration by just looking at the distribution of our data. 
 				This figure shows histograms to illustrate the distribution of every data field. While it may not be the cleanest plot in
 				a traditional sense, these histograms are helpful in understanding the different distributions across the fields, as well as
 				in identifying outliers or abnormalities in the data. For example, we notice that <strong><code>objectid</code></strong> takes values 
@@ -140,14 +145,7 @@
 			</figure>
 
 			<figure>
-				<img src="" alt="" />
-				<figcaption>
-				Box-plot of changes over time
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="images/corp_own_start_end_rank_correlation.jpeg" alt="" />
+				<img src="images/corp_own_start_end_rank_correlation.svg" alt="" />
 				<figcaption>
 				In this figure, we are primarily interested in whether neighborhoods that had relatively high 
 				corporate ownership rate in 2004 also show relatively high rates or changes in total corporate ownership rate by 2024. 
@@ -155,27 +153,39 @@
 				we show a scatter plot of the rank of corporate ownership rates in 2004 on the x-axis 
 				and rank of corporate ownership rate in 2024 on the y-axis. We fit a linear regression to these data (dotted line), 
 				highlighting the 95% confidence interval of the mean in the shaded area. In both cases, every point corresponds to a single neighborhood. 
-				Lastly, we perform Spewarman's rank correlation in order to statistically evaluate relationships. 
-
-				The left-hand panel clarifies that the rank in corporate ownership rank is generally preserved between 2004 and 2024 (p-value = 1.2 * 10^). That is, 
+				We perform Spearman's rank correlation in order to statistically evaluate the correlation between rank in 2004 and in 2024. We see that 
+				the rank in corporate ownership rate is generally preserved between 2004 and 2024 (p-value = 1.2 * 10^-5). That is, 
 				neighborhoods with relatively high corporate ownership ranks in 2004 showed relatively high corporate ownership rates in 2024. Therefore, 
-				during those two decades, there was no drastic shift in the landscape of corporate ownership rates across neighborhoods. While this 
-				plot nicely 
+				during those two decades, there was no drastic shift in the landscape of corporate ownership rates across neighborhoods. The points 
+				highlighted in red strongly contrasts against the other grey, unlabeled points. These are examples that stand out, as they deviate 
+				strongest from the trend. These points show that South Boston Waterfront and East Boston both substantially ascended the corporate ownership 
+				rate rankings by 2024, as we started to notice in the previous visualization. 
+				East Boston, which started as the sixth lowest in rate in 2004, is now tied for the neighborhood with the fifth 
+				highest corporate ownership rate. 
 
-				The right-hand panel
+				While this figure shows that the relative ranking in 2004 is generally indicative of corporate ownership rate ranking in 2024, it is 
+				possible that some neighborhoods that started with low rates had dramatic increases in the past two decades and vice-versa. In the next 
+				figure, we will look at whether ranking in 2004 was indicative of the rank in overall change in rates by 2024.
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="images/delta_corp_own_start_end_rank_correlation.jpeg" alt="" />
+				<img src="images/delta_corp_own_start_end_rank_correlation.svg" alt="" />
 				<figcaption>
-				In this scatter plot, the x-axis is the same as before, showing corporate ownership rank in 2004, and the y-axis shows the rank in 
-				total change in corporate ownership rate between 2004 and 2024. Similar to the previous figure, we fit a linear regression to these data, 
-				and calculate the Spearman's correlation between corporate ownership rate in 2004 and total change in rate between 2004 and 2024. We see
-				a weaker, but still significantly positive correlation in this case. The weaker correlation suggests that while the degree of corporate 
-				ownership rate in 2004 is somewhat indicative of relative change in rate during the two decades, there are indeed some neighborhoods that 
-				defy this trend. For instance, we see that . On the other hand, East Boston ranked among the lowest in corporate ownership rate in 2004, 
-				but experienced the second largest increase by 2024. 
+				In this figure, we show two scatter plots. In the plot on the left, we show rank of corporate ownership rate in 2004 on the x-axis 
+				and rank of total change in corporate ownership rate by 2024 on the y-axis. Here, we see a weaker, yet still statistically significant 
+				correlation (p-value = 0.02), suggesting that while the relative degree of corporate ownership rates in 2004 was somewhat predictive of 
+				total change in rate by 2024, there are some noticeable exceptions. Highlighted in red are Chinatown, South Boston Waterfront, 
+				East Boston, and Charlestown. We see that Chinatown tied for the highest corporate ownership rate in 2004, yet saw a relatively small change 
+				in corporate ownership rate by 2024. Conversely, the other three highlighted points had relatively low corporate ownership rates in 2004, 
+				yet experienced among the largest changes in rates by 2004. To get a better sense of the actual change in corporate ownership rates for 
+				these neighborhoods compared to others, we include the right-hand scatterplot. Highlighted in red are the same neighborhoods, showing the 
+				corporate ownership rates in 2004 on the x-axis and change in rates on the y-axis. We see that East Boston and Charlestown both 
+				had relatively low corporate ownership rates (both 3%) in 2004, but skyrocketted to nearly 30% by 2024. On the other hand, Chinatown 
+				already boasted the highest rate at 13% in 2004, but only increased by half the percentage points as Charlestown and East Boston. 
+				In both figures, the confidence interval gives us an idea of the neighborhoods within the predicted trend, and the red points clearly 
+				emphasize the examples we wish to discuss. Again, the scatterplot of the rankings provides us a visual understanding of the Spearman's 
+				rank correlation. 
 				</figcaption>
 			</figure>
 
@@ -185,7 +195,10 @@
 				In this figure, we can study the total change in corporate ownership rates by zip code through a geographic lens. For each zip code, 
 				we compute the average change across neighborhoods in the zip code. The map is colored by this change in corporate ownership rate, 
 				using a gradient from light orange to dark red. The increase in saturation implies greater density/concentration, and the red color 
-				highlights increasing rates. The figure nicely illustrates how zip codes along 
+				highlights increasing rates. The figure nicely illustrates how zip codes near Downtown Boston and along the Charles River generally 
+				increased the most in corporate ownership rate since 2004, while this change in rate decreases as we move further south. This provides 
+				geographic context to better understand where corporate ownership rates seem to be increasing strongest, and we can use this information 
+				in future analyses to better understand the implications of rising rates around Downtown Boston.
 				</figcaption>
 			</figure>
 
@@ -245,7 +258,28 @@
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>The evolution of corporate ownership and owner occupancy since 2004 has differed greatly across neighborhoods in Boston. In the 
+				early stages of our analysis, we found that certain neighborhoods, particularly those along the Charles River and port near 
+				Downtown Boston have experienced much larger increases in corporate ownership rates in the past two decades. Some, such as 
+				South Boston Waterfront and East Boston have seen relatively rapid rises in corporate investments. Later, we found that ownership 
+				vacancy rates had a more complicated, bi-directional change over time depending on the neighborhood. Some neighborhoods, particularly 
+				South Boston Waterfront. 
+				
+				A major limitation of our current dataset is that we could not analyze changes in corporate ownership rates and owner occupancy in the context 
+				of evolving demographics. In future studies, it would be grealy beneficial to collect Census-like data temporally over the past two decades. Such 
+				data would be particularly helpful for exploring whether neighborhoods with relatively drastic changes in corporate ownership and owner vacancy 
+				have also experienced drastic changes in demographics. For example, I might expect to see such dramatic changes in South Boston Waterfront, 
+				where corporate ownership has skyrocketed. 
+			
+				Obtaining financial data on residents and surrounding businesses would also be interesting to explore. Are increases in corporate ownership 
+				often accompanied by increases in the median family income in a neighborhood? Do small businesses in the area experience increases in revenue? 
+				How does it effect the fixed costs (e.g. lease) of small businesses in the area? Do small businesses get priced out of their locations? Do 
+				residential leases tend to increase with increases in corporate ownership? Are changes in lease costs paired with changes in racial demographic?
+				
+				Lastly, given the dire need to better understand and identify neighborhoods with increased risk of evictions, we must also collect 
+				data on evictions and non-payments. In the context of our readings, we may find important trends that would inform legislation on 
+				corporate ownership and individual investments in residential properties. For now, we cannot be sure of how these variables interact.
+			</p>
 		</section>
 	</main>
 </body>
