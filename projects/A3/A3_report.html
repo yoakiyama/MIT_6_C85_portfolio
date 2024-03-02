@@ -41,8 +41,10 @@
 			<ul>
 				<li>Here, I designed a figure that attempts to communicate the data in its purest form. Since I am searching for a trend, I decided 
 					to first use a line chart. Lines charts can be inherently suggestive of trends and allow viewers to follow them as they traverse 
-					the x-axis</li>
-				<li>We have four categories, Male 1900, Female 1900, Male 2000, and Female 2000. Within those categories though, the two male categories 
+					the x-axis. We can start to see that perhaps above the age of 55 in the year 2000, the gap between female and male populations at 
+					older age groups may be increasing, and much more so than in 1900. I further describe how this may be observed in the following 
+					comments.</li>
+				<li>The figure shows four categories, Male 1900, Female 1900, Male 2000, and Female 2000. Within those categories though, the two male categories 
 					and two female categories should have some shared relation to more easily allow for identification of Male and Female in the chart. 
 					Here, I decided to use shapes for each point to indicate sex (triangle for male and circle for female). Similarly, the two 1900 
 					and two 2000 categories should share similarities to allow for easy separation of the two years. To this end, I decided to use 
@@ -54,13 +56,14 @@
 					levels in the year 2000 compared to the year 1900. While this latter feature is not the focus of the chart, it gives context for 
 					the overall population growth between 1900 and 2000.</li>
 				<li>Prior to actually drawing the plot, I thought that a line chart of the raw data would nicely communicate a trend. However, 
-					the resulting figure does not easily communicate an answer for the question we asked: are females outliving males in 2000 
+					the resulting figure does not easily communicate an answer for the question I asked: are females outliving males in 2000 
 					to a greater degree than in 1900. One major reason that this plot does not effectively answer this question is due to the large 
 					change in overall population between the two. The change in magnitude makes it difficult to see if there was any difference between 
 					female and males at older age groups in 1900. It is possible that there is a meaningful difference, but just difficult to see 
 					since the number of living people at those age groups was so much smaller than in 2000. Furthermore, the line chart allows for easy 
-					traversal of a single group over the age groups, but forces the viewer to compute the difference between different lines. In future 
-					visualizations, we hope to address both of these issues.</li>
+					traversal of a single group over the age groups, but forces the viewer to compute the difference between different lines. 
+					Overall, this figure seems to have many drawbacks that prevent it from effectively answering and communicating the question at hand. 
+					In future visualizations, I hope to address both of these issues.</li>
 			</ul>
 
       <figure>
@@ -86,10 +89,13 @@
 					groups. It is especially apparent in the bottom panel for the year 2000.</li>
 				<li>Lastly, rather than just showing the fraction of females, I include shading for the male area. I decided to do this to contrast against 
 					the area covered by the female curve. In the bottom panel for the year 2000, we can see how the shaded area (fraction of males) 
-					strongly decreases at older age groups</li>
+					strongly decreases at older age groups. Changes in the shaded area may thus help communicate an important trend in the data.</li>
 				<li>Since it was not my original plan to split the figure and mirror across the x-axis, I did not intend to have an explicit hierarchy 
-					between 1900 and 2000 -- this was mearly a by-product. This horizontal splitting makes it a bit difficult to compare the change in 
-					fraction of females at older age groups between 1900 and 2000 since they are far away and pointing in opposite directions</li>
+					between 1900 and 2000 -- this was mearly a by-product. In the bottom panel, the increasing fraction downwards along the y-axis 
+					may confuse viewers, since this falls below the y = 0 point, which is typically depicted as negative numbers. Furthermore, 
+					this horizontal splitting makes it a bit difficult to compare the change in 
+					fraction of females at older age groups between 1900 and 2000 since they are far away and pointing in opposite directions. I 
+					will consider these limitations in future figures.</li>
 			</ul>
 
       <figure>
@@ -115,10 +121,10 @@
 					of the trend.</li>
 				<li>I also flipped the shading in this figure so that the female area was now shaded instead. I thought that shading the female portion 
 					and leaving the male portion unshaded would accentuate the increase in female proportion at older age groups.</li>
-				<li>After looking at this figure, we might wonder if it is even necessary to label male and female. Could we just keep one of the 
+				<li>After looking at this figure, I wonder if it is even necessary to label male and female. Could I just keep one of the 
 					categories since there is only a single degree of freedom. Furthermore, do we need to keep 1900 and 2000 separate, or is 
-					there a way to merge the data into a single panel like Figure 1 had shown. We will keep these questions in mind when designing 
-					the final visualization. Along the way, it is crucial to remember that we are trying to answer and communicate the central question: 
+					there a way to merge the data into a single panel like Figure 1 had shown. I will keep these questions in mind when designing 
+					the final visualization. Along the way, it is crucial to remember that I am trying to answer and communicate the central question: 
 					do those who identify as female in 2000 live longer than men to a greater degree than they did in 1900 </li>
 			</ul>
 
@@ -128,12 +134,12 @@
         Through this exercise, I explored three visualization strategies: 1) a line chart on the raw data to show the total population across age groups, 
 		sex, and year; 2) an area chart to show the fraction/proportion of females across age groups, with data for 1900 and 2000 symmetrized across the 
 		x-axis; 3) a similar area chart symmetrized across a central boundary parallel to the y-axis. The first figure stays true to the raw data -- i.e. 
-		we do not perform any data transformations -- but the trends are difficult to see and the four separate lines force the viewer to compute and 
+		I do not perform any data transformations -- but the trends are difficult to see and the four separate lines force the viewer to compute and 
 		evaluate differences between male and female populations in 1900 and 2000. The second figure introduces a transformation of the population into 
 		fractions within age groups and year. This transformation allows us to easily control for differences in overall population and 
 		compare 1900 and 2000. It also allows us to clearly show how females outlive males in certain age ranges, as the values depart from 0.5. The second 
 		figure was symmetrized across the x-axis, which made it difficult to compare the increase in the fraction of females at older age groups in 1900 
-		and 2000. We attempt to address this in Figure 3 by symmetrizing across a central boundary parallel to the y-axis, and sorting age on the x-axis in 
+		and 2000. I attempt to address this in Figure 3 by symmetrizing across a central boundary parallel to the y-axis, and sorting age on the x-axis in 
 		ascending order in the left panel (1900) and descending order in the right panel (2000), such that the increase in fraction of females is centered 
 		in the figure. While this design really accentuates the dominant population of females at older age groups and allows us to very easily compare 
 		between 1900 and 2000, the descending age in the right panel may be difficult to process for viewers.
@@ -181,7 +187,7 @@
 			data. The y-axis ranges from 0% to 100%, and thus the shaded (bar) regions nicely visually communicates the proportion of each age group 
 			who identifies as female. We can easily see from this figure that the bars and, by extension, the shaded area becomes much larger and brighter 
 			at older age groups, highlighting that females do indeed appear to be outliving men and to a greater degree in 2000 than in 1900. To help 
-			communicate this result, I also include annotations for the last bar for those aged 90 and above. We see that although both years have a 
+			communicate this result, I also include annotations for the last bar for those aged 90 and above. We identify that although both years have a 
 			greater than 50% female population for this age group, the percentage is much larger (76% versus 57%) in 2000.
 			</p>
 			<p>
@@ -192,18 +198,18 @@
 			balance in older age groups, particularly in the year 2000. 
 			</p>
 			<p>
-			Lastly, we focus on a title. Taking lessons from our reading group discussions, I found that realized that a purposeful title can have 
+			Lastly, I focus on a title. Taking lessons from our reading group discussions, I found that realized that a purposeful title can have 
 			help achieve conceptual and affective objectives. In my previous drafts, the titles were simple descriptions of the illustrated data. These 
 			titles might be considered somewhat objective in nature. However, I realized that the title, which has the largest font in the entire figure, 
 			may be an underappreciated opportunity to guide the viewer through the figure. By posing the title as a question, "Are females outliving 
-			males now more than ever?", we can grab the attention of both females and males and provide the illusion that the viewer is answering this 
+			males now more than ever?", I can grab the attention of both females and males and provide the illusion that the viewer is answering this 
 			question on their own. The term "outliving" may strike an emotional side to the viewer as well, given the sensitive nature of mortality. 
 			Thus the title may prime people to ask why females make up a vast majority of older age groups in 2000, and what fundamentally changed 
 			in the past century to cause this shift. It may even cause people to reflect on their own health and motivate them find themselves in the 
 			older age groups in the future, though I do understand that it may have the opposite effect and trigger anxiety in some viewers.
 			</p>
 			<p>Some design options do not appear in this final figure. For example, while I considered changing the y-axis range from around 40% to 80% to accentuate the increase in the percentage of females, but 
-			elected to not take this route. As discussed in class, we generally should avoid truncating the y-axis in either direction for bar charts, and 
+			elected to not take this route. As discussed in class, we should generally avoid truncating the y-axis in either direction for bar charts, and 
 			while it could be helpful in this case to further accentuate the increase in female fraction, the height of the bars would be much less immediately 
 			interpretable and may mislead viewers. 
       		</p>
