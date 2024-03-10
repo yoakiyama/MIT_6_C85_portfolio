@@ -26,7 +26,10 @@
       <figure>
 				<img src="images/for.svg" alt="" />
 				<figcaption>
-					The bar plot shows the total number of substantiated complaints against every ethnicity in the dataset.
+					The bar plot shows the total number of substantiated complaints against every NYPD officer ethnicity between 1985 and 2020. 
+					The total number of substantiated complaints against white officers is colored in red, while those against all other 
+					officer ethnicities is colored in light grey. A caption is included next to the red bar and includes a p-value for a statistical test 
+					that supports the claim that white officers disproportionately abuse their power and use excessive force.
 				</figcaption>
 			</figure>
 
@@ -42,7 +45,9 @@
 					officers. I colored all other ethnicities in light grey in order to place additional emphasis on cases involving white officers. 
 					Studies have shown that darker contrasts of red often act as signals of dominance, aggression, and anger in humans and across many 
 					animal species, and thus serves as an apt color for this emotionally charged topic 
-					(https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215610, https://akjournals.com/view/journals/1126/5/1/article-p161.xml).
+					(https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215610, https://akjournals.com/view/journals/1126/5/1/article-p161.xml). 
+					Lastly, the text next to the red bar includes a caption colored in white. I used white text since the caption includes a p-value from a statistical test and 
+					is meant to add credibility to the claims. I reasoned that colored text would detract from this message.
 				</li>
 				<li>Labels: Here, rather than labeling "cases", I humanize each instance by setting the y-axis label to "victims". In this way, I hope 
 					to generate an emotional reaction in viewers. I also use the word "Officers" rather "Members of service", which is the term used 
@@ -52,10 +57,16 @@
 				<li>I elected to keep the y-axis in raw counts rather than performing any normalizations (i.e. fraction of cases or normalized by 
 					the number of officers in each category). The raw counts allows me to humanize each data point by showing the total number of 
 					victims in each category.</li>
-				<li>Deception score: -1. By just showing the complaints as raw counts, this figure does not account for the total number of officers in 
-					each ethnicity. This is crucial to consider when making the claim that white officers commit the most abuse. 
-					Moreover, I am definitely aiming for affective objectives here, particularly with the color scheme, axis labels, and title. 
-					Therefore, the visualization is certainly far from earnest or objective.</li>
+				<li>Deception score: -0.5. By just showing the complaints as raw counts, this visualization alone does not show how the number of 
+					substantiated cases may be related to the total number of officers in each ethnicity. 
+					This is crucial to consider when making the claim that white officers commit the most abuse. To address this, I downloaded data 
+					from NYPD Members of Service (MOS) Demographics data for Jan 12, 2024 
+					(https://app.powerbigov.us/view?r=eyJrIjoiZTI4OTRjZTYtNTYwOC00NzcxLThhYTItOTU5NGNkMzIzYjVlIiwidCI6IjJiOWY1N2ViLTc4ZDEtNDZmYi1iZTgzLWEyYWZkZDdjNjA0MyJ9&pageName=ReportSection) 
+					and performed a binomial test where the null hypothesis is that there is no association between officer ethnicity and the number of substantiated complaints. 
+					The resulting p-value suggests that white officers disproportionately abuse their power. This text may contribute to an illusion of 
+					objectivity in an otherwise highly emotional figure, particularly with the color scheme, axis labels, and title. 
+					While the visualization has aspects of objectivity (raw counts and a statistical test), the design choices were deliberately chosen 
+					for affective objectives.</li>
 				
 			</ul>
     </section>
@@ -66,9 +77,7 @@
       <figure>
 				<img src="images/against.svg" alt="" />
 				<figcaption>
-          The figure illustrates both the percent of instances [grey] and percent of police force [orange]. Data for complaints is taken between 
-		  1985 and 2020, while the percentages of ethnicities in the police force represents that of January 12, 2024. The p-value, which is computed via a binomial test, suggests that there is insufficient evidence to conclude that white NYPD officers are 
-		  disproportionately commiting excessive force and abuse of authority during this time period.
+          The figure illustrates the percent of complaints made against 
 				</figcaption>
 			</figure>
 
@@ -77,18 +86,15 @@
 			</p>
 
 			<ul>
-				<li>The data represented in this table used the exact same data as the previous visualization in addition to 
-					NYPD Members of Service (MOS) Demographics data for Jan 12, 2024 
-					(https://app.powerbigov.us/view?r=eyJrIjoiZTI4OTRjZTYtNTYwOC00NzcxLThhYTItOTU5NGNkMzIzYjVlIiwidCI6IjJiOWY1N2ViLTc4ZDEtNDZmYi1iZTgzLWEyYWZkZDdjNjA0MyJ9&pageName=ReportSection). 
-					I pulled this data in order to try to normalize the number of substantiated complaints by the demographics of the NYPD police force.
-				</li>
 				<li>In an argument against the proposition, this visualization appears to account for the total number of white and non-white officers 
 					in the NYPD. </li>
 				<li>A major difference compared to the previous visualization is in the categorization of NYPD officers. Here, we create binary categories 
 					for ethnicity: White and Non-white. This combines the incidences of Black, Hispanic, Asian, and American Indian officers into a single 
 					category, making the total incidences involving White officers appear much less dominant. </li>
-				<li>RATIONALE_3</li>
-				<li>Deception score: -0.5. A more appropriate analysis would use NYPD demographics from 1985 to 2020 rather than just using 
+				<li>Compared to the previous visualization, the color scheme in this figure is less dramatic. Here, we use a white background, grey bars 
+					to show the percentage of substantiated complaints against each officer ethnic category, and orange bars to show the percent of 
+					the NYPD force that the ethnic category comprises. I chose to color the NYPD officer demographics in orange to </li>
+				<li>Deception score: -1.5. A more appropriate analysis would use NYPD demographics from 1985 to 2020 rather than just using 
 					data from 2024. </li>
 			</ul>
     </section>
@@ -102,8 +108,26 @@
 		 role of white officers in police abuse incidences. I would not be surprised if others who used different data processing choices could find 
 		 statistical significance arguing FOR the proposition as well. Data filtering as well as data processing decisions, such as what we consider to be 
 		 "substantiated" cases, influences any statistical test that is performed.</p>
+
+		 <p>This exercise also pushed me to explore with color much more than I had before. I had previously never used any non-white background color. 
+			When I was attempting to maximize for an affective objective in the visualization supporting the proposition, I realized that the background 
+			color could be incredibly powerful, perhaps even more so than the colors of the bars in the plot. Particularly in a visualization aimed at 
+			triggering emotion, the color scheme can aim at accomplishing affective goals before the viewer even reads the title or processes the 
+			presented data.</p>
 		
-		 <p>A particularly difficult part of this assignment </p>
+		 <p>A particularly difficult part of this assignment was choosing a proposition that I could attempt to take on through an unbiased lens. 
+			I reasoned that selecting an topic for which I did not have strong priors would allow me to most effectively produce visualizations for and 
+			against the proposition. Given that I had not explored data regarding police complaints or thought too deeply about the demographics of the 
+			police force before, I figured that this proposition would be appropriate for this assignment. Yet, I found that producing the 
+			visualization against the proposition was most difficult, and I believe that much of the difficulty came from my exploratory analysis of 
+			the data. One figure that I created during early exploration of the data had strong similarities to the visualization for the proposition. 
+			To look at the distribution of officer ethnicities in substantiated cases, I produced a simple barplot that showed the number of cases for each 
+			officer ethnicity. It immediately caught my eye, even when it lacked any ornamental features (axis labels, title, color, etc.). Seeing this 
+			plot likely had a slight emotional effect. Of course, I understood that I should correct for the demographics of the NYPD when considering 
+			the distribution of substantiated cases across officer ethnicities, but this initial reaction likely contributed to my initial difficulties in 
+			brainstorming ideas to produce a visualization against the proposition. This is all to say that our prior beliefs and emotions 
+			can strongly affect how we produce data visualizations, and they are important to consider during the process of exploring, analyzing, and 
+			visualizing data for specific objectives.</p>
     </section>
 	</main>
 </body>
