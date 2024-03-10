@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Your Name</strong> — <em>Your MIT Email Address</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: White NYPD officers commit the majority of excess force and abuse of authority.</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="images/for.svg" alt="" />
+				<figcaption>
+					The bar plot shows the total number of substantiated complaints against every ethnicity in the dataset.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li> For this analysis, I removed any entry with any missing values, entries for which the complainant ethnicity was Unknown or Refused, 
+					and entries for which the complainant age was less than 0 to maximize data quality.</li>
+				<li>The color scheme: I employ a black background to set a dark, somber, and emotional  tone for the subject: 
+					police brutality and abuse of authority. The black background also allows the red coloring of cases involving white police 
+					officers. I colored all other ethnicities in light grey in order to place additional emphasis on cases involving white officers. 
+					Studies have shown that darker contrasts of red often act as signals of dominance, aggression, and anger in humans and across many 
+					animal species, and thus serves as an apt color for this emotionally charged topic 
+					(https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215610, https://akjournals.com/view/journals/1126/5/1/article-p161.xml).
+				</li>
+				<li>Labels: Here, rather than labeling "cases", I humanize each instance by setting the y-axis label to "victims". In this way, I hope 
+					to generate an emotional reaction in viewers. I also use the word "Officers" rather "Members of service", which is the term used 
+					in the official table. I chose to call them officers since for this purpose, I did not want to convey contributions 
+					to public service. Lastly, in the title combats a colloquialism that is commonly used in the discussion of police brutality. 
+					It also uses words such as "worst", "offenders", "abuse", "force", and "power" to incite emotion upon first glance.</li>
+				<li>I elected to keep the y-axis in raw counts rather than performing any normalizations (i.e. fraction of cases or normalized by 
+					the number of officers in each category). The raw counts allows me to humanize each data point by showing the total number of 
+					victims in each category.</li>
+				<li>Deception score: -1. By just showing the complaints as raw counts, this figure does not account for the total number of officers in 
+					each ethnicity. This is crucial to consider when making the claim that white officers commit the most abuse. 
+					Moreover, I am definitely aiming for affective objectives here, particularly with the color scheme, axis labels, and title. 
+					Therefore, the visualization is certainly far from earnest or objective.</li>
+				
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="images/against.svg" alt="" />
+				<figcaption>
+          The figure illustrates both the percent of instances [grey] and percent of police force [orange]. Data for complaints is taken between 
+		  1985 and 2020, while the percentages of ethnicities in the police force represents that of January 12, 2024. The p-value, which is computed via a binomial test, suggests that there is insufficient evidence to conclude that white NYPD officers are 
+		  disproportionately commiting excessive force and abuse of authority during this time period.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>The data represented in this table used the exact same data as the previous visualization in addition to 
+					NYPD Members of Service (MOS) Demographics data for Jan 12, 2024 
+					(https://app.powerbigov.us/view?r=eyJrIjoiZTI4OTRjZTYtNTYwOC00NzcxLThhYTItOTU5NGNkMzIzYjVlIiwidCI6IjJiOWY1N2ViLTc4ZDEtNDZmYi1iZTgzLWEyYWZkZDdjNjA0MyJ9&pageName=ReportSection). 
+					I pulled this data in order to try to normalize the number of substantiated complaints by the demographics of the NYPD police force.
+				</li>
+				<li>In an argument against the proposition, this visualization appears to account for the total number of white and non-white officers 
+					in the NYPD. </li>
+				<li>A major difference compared to the previous visualization is in the categorization of NYPD officers. Here, we create binary categories 
+					for ethnicity: White and Non-white. This combines the incidences of Black, Hispanic, Asian, and American Indian officers into a single 
+					category, making the total incidences involving White officers appear much less dominant. </li>
+				<li>RATIONALE_3</li>
+				<li>Deception score: -0.5. A more appropriate analysis would use NYPD demographics from 1985 to 2020 rather than just using 
+					data from 2024. </li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>There are certainly many ways to use the same data to argue two completely different stances. As we have discussed many times in class
+		 and during graduate discussions, every visualization has some inherent bias, regardless of how objective it may seem. In the visualization against 
+		 the proposition, I included a p-value to portray a sense of credibility, but the figure also included design choices aimed at de-emphasizing the 
+		 role of white officers in police abuse incidences. I would not be surprised if others who used different data processing choices could find 
+		 statistical significance arguing FOR the proposition as well. Data filtering as well as data processing decisions, such as what we consider to be 
+		 "substantiated" cases, influences any statistical test that is performed.</p>
+		
+		 <p>A particularly difficult part of this assignment </p>
+    </section>
+	</main>
+</body>
+</html>
