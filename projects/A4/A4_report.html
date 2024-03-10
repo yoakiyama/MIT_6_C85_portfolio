@@ -64,7 +64,8 @@
 					(https://app.powerbigov.us/view?r=eyJrIjoiZTI4OTRjZTYtNTYwOC00NzcxLThhYTItOTU5NGNkMzIzYjVlIiwidCI6IjJiOWY1N2ViLTc4ZDEtNDZmYi1iZTgzLWEyYWZkZDdjNjA0MyJ9&pageName=ReportSection) 
 					and performed a binomial test where the null hypothesis is that there is no association between officer ethnicity and the number of substantiated complaints. 
 					The resulting p-value suggests that white officers disproportionately abuse their power. This text may contribute to an illusion of 
-					objectivity in an otherwise highly emotional figure, particularly with the color scheme, axis labels, and title. 
+					objectivity in an otherwise highly emotional figure, particularly with the color scheme, axis labels, and title. A limitation of this analysis 
+					is that the NYPD demographics only considers data from 2024, rather than between 1985 and 2020, which the complaints dataset uses. 
 					While the visualization has aspects of objectivity (raw counts and a statistical test), the design choices were deliberately chosen 
 					for affective objectives.</li>
 				
@@ -77,7 +78,7 @@
       <figure>
 				<img src="images/against.svg" alt="" />
 				<figcaption>
-          The figure illustrates the percent of complaints made against 
+				This barplot illustrates the percentage of substantiated complaints against white and non-white NYPD officers. 
 				</figcaption>
 			</figure>
 
@@ -86,16 +87,27 @@
 			</p>
 
 			<ul>
-				<li>In an argument against the proposition, this visualization appears to account for the total number of white and non-white officers 
-					in the NYPD. </li>
-				<li>A major difference compared to the previous visualization is in the categorization of NYPD officers. Here, we create binary categories 
-					for ethnicity: White and Non-white. This combines the incidences of Black, Hispanic, Asian, and American Indian officers into a single 
-					category, making the total incidences involving White officers appear much less dominant. </li>
-				<li>Compared to the previous visualization, the color scheme in this figure is less dramatic. Here, we use a white background, grey bars 
-					to show the percentage of substantiated complaints against each officer ethnic category, and orange bars to show the percent of 
-					the NYPD force that the ethnic category comprises. I chose to color the NYPD officer demographics in orange to </li>
-				<li>Deception score: -1.5. A more appropriate analysis would use NYPD demographics from 1985 to 2020 rather than just using 
-					data from 2024. </li>
+				<li>In an argument against the proposition, this visualization shows an incredibly simple barplot illustrating the percentage of 
+					substantiated complaints against white and non-white NYPD officers. </li>
+				<li>A major difference compared to the previous visualization is in the categorization of NYPD officers.
+					 Here, we create binary categories for ethnicity: White and Non-white. This combines the incidences of Black, Hispanic, 
+					 Asian, and American Indian officers into a single category, making the total incidences involving White officers appear 
+					 much less dominant. Moreover, I converted the raw counts into percentages. Compared to the previous figure, which uses raw counts 
+					 and labels the y-axis as "victims", this figure removes the human aspect from each case.</li>
+				<li>Compared to the previous visualization, the color scheme in this figure is less dramatic. Here, we use a white background and 
+					grey bars to show the percentage of substantiated complaints against each officer ethnic category. With this figure, I hope to not 
+					trigger much emotion in the audience. Since this topic is generally emotionally charged, this simple depiction of data along with 
+					mute color schemes may provide a sense of objectivity.</li>
+				<li>In the title, I use the word "trivial" to try to emphasize a qualitatively small difference between the two bars. I also use the word 
+					"complaints", which is what the original data table uses. "Complaints" certainly carries a lot less emotion than "abuse", "power", or 
+					"force", and may conversely trivialize each incident since "complaint" may instead imply small issues. I also use 
+					"members of service" and "service member", which are also used in the table, to emphasize that these police officers are serving 
+					the public. These words may carry much more positive connotations than "officer" and "police".</li>
+				<li>Deception score: -1.5. Combining the complaints of all non-white officers visually diminishes the difference between white officers 
+					and non-white officers. This visualization also does not consider the total number of white and non-white officers in the NYPD, 
+					and thus does not provide crucial context. Overall, while the data used in both visualizations is almost entirely the same, 
+					simple processing steps provide a much different visualization that seems top support the opposing side of the argument.
+				</li>
 			</ul>
     </section>
 
